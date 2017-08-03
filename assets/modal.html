@@ -1,0 +1,84 @@
+<html>
+  <meta charset="utf-8">
+  <!-- http://garden.zendesk.com -->
+  <link rel="stylesheet" href="https://assets.zendesk.com/apps/sdk-assets/css/1/zendesk_garden.css" type="text/css">
+</head>
+<head>
+  <link href="https://cdn.jsdelivr.net/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+  <div id="contentmodal"></div>
+
+  <script id="error-template" type="text/x-handlebars-template">
+    <p>{{status}} - {{statusText}} error. Data not found.</p>
+  </script>
+
+  <script id="requester-template" type="text/x-handlebars-template">
+    {{#slot img}}{{this}}{{/slot}}
+    <table>
+    <tr>
+      <td><strong>VIN</strong></td>
+      <td class="data">{{vin}}</td>
+    </tr>
+    <tr>
+      <td><strong>Tahun</strong></td>
+      <td class="data">{{tahun}}</td>
+    </tr>
+    <tr>
+      <td><strong>Merek</strong></td>
+      <td class="data">{{merek}}</td>
+    </tr>
+    <tr>
+      <td><strong>Model</strong></td>
+      <td class="data">{{model}}</td>
+    </tr>
+    <tr>
+      <td><strong>Warna</strong></td>
+      <td class="data">{{warna}}</td>
+    </tr>
+    <tr>
+      <td><strong>Tipe</strong></td>
+      <td class="data">{{tipe}}</td>
+    </tr>
+    <tr>
+      <td><strong>Nama Pembeli</strong></td>
+      <td class="data">{{nama_pembeli}}</td>
+    </tr>
+    <tr>
+      <td><strong>Cabang</strong></td>
+      <td class="data">{{cabang}}</td>
+    </tr>
+    <tr>
+      <td><strong>Nama Sales</strong></td>
+      <td class="data">{{nama_sales}}</td>
+    </tr>
+    <tr>
+      <td><strong>Tanggal Beli</strong></td>
+      <td class="data">{{tanggal_beli}}</td>
+    </tr>
+    <tr>
+      <td><strong>Kapasitas Silinder (CC)</strong></td>
+      <td class="data">{{cc}}</td>
+    </tr>
+    <tr>
+      <td><strong>Bahan Bakar</strong></td>
+      <td class="data">{{bahan_bakar}}</td>
+    </tr>
+    <tr>
+      <td><strong>Tipe Mesin</strong></td>
+      <td class="data">{{tipe_mesin}}</td>
+    </tr>
+    <tr>
+      <td><strong>Sistem Roda</strong></td>
+      <td class="data">{{sistem_roda}}</td>
+    </tr>
+    </table>
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery/3.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="modal.js"></script>
+</body>
+</html>
